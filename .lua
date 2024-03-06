@@ -15,7 +15,7 @@ local workspace = game:GetService("Workspace")
 --game:GetService("ReplicatedStorage")["HatchEgg"]:FireServer(unpack(args))
 --table.insert(tbl,v.Name)
 for i,v in pairs(workspace:GetChildren()) do
-  if v.Name:find("World") then
+  if v.Name:sub(1,5) == "World" then
     for index,variable in pairs(v["Eggs"]:GetChildren()) do
         if index == 1 or index == "1" then
             table.insert(eggh,variable.Name)
@@ -25,7 +25,7 @@ for i,v in pairs(workspace:GetChildren()) do
 end
 
 for i,v in pairs(workspace:GetChildren()) do
-  if v.Name:find("World") then
+  if v.Name:sub(1,5) == "World" then
     table.insert(W,v.Name)
   end
 end
