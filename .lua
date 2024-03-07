@@ -12,6 +12,8 @@ local workspace = game:GetService("Workspace")
 --    [1] = workspace["World0"]["Eggs"]["Level0"]
 --}
 
+--local targetPosition = user.Character.HumanoidRootPart.Position + user.Character.HumanoidRootPart.CFrame.LookVector * Vector3.new(0,0,5)
+
 --game:GetService("ReplicatedStorage")["HatchEgg"]:FireServer(unpack(args))
 --table.insert(tbl,v.Name)
 for i,v in pairs(workspace:GetChildren()) do
@@ -34,7 +36,7 @@ T1:Toggle("Auto swing",false,function(value)
     _G.autodmg = value
     while wait() do
       if _G.autodmg == false then break end
-      game:GetService("ReplicatedStorage")["Click"]:FireServer(user.Character.HumanoidRootPart.Position * CFrame.new(0,0,-1.5))
+      game:GetService("ReplicatedStorage")["Click"]:FireServer(user.Character.HumanoidRootPart.Position + user.Character.HumanoidRootPart.CFrame.LookVector * Vector3.new(0,0,5))
     end
 end)
 
