@@ -13,7 +13,7 @@ local workspace = game:GetService("Workspace")
 --}
 
 --local targetPosition = user.Character.HumanoidRootPart.Position + user.Character.HumanoidRootPart.CFrame.LookVector * Vector3.new(0,0,5)
-
+--Workspace.World2.Enemies.Turtle Shell
 --game:GetService("ReplicatedStorage")["HatchEgg"]:FireServer(unpack(args))
 --table.insert(tbl,v.Name)
 for i,v in pairs(workspace:GetChildren()) do
